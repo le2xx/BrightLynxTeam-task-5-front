@@ -18,20 +18,22 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import '../stylus/main.styl'
-  .header
-    padding 10px
-    height 100px
-    border solid 2px $main-color
-    border-radius 6px
+@import '../stylus/main.styl'
 
-    &__title
-      display inline
-      vertical-align middle
-      line-height 100px
+.header
+  padding 10px
+  height 100px
+  border solid 2px $main-color
+  border-radius 6px
 
-    &__right-block
-      display inline-block
-      vertical-align middle
-      text-align right
+  &__title
+    display inline
+    vertical-align middle
+    line-height 100px
+    text-transform uppercase
+
+  &__right-block
+    display inline-block
+    vertical-align middle
+    text-align right
 </style>
