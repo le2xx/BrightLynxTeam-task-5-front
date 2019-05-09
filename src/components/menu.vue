@@ -1,8 +1,15 @@
 <template lang="pug">
   .menu
+    -
+      const list = [
+        { name: 'cats', text: 'Кошки' },
+        { name: 'dogs', text: 'Собачки' },
+        { name: 'horses', text: 'Лошадки' }
+      ];
     ul.menu__list
-      each li in ['Кошки', 'Собачки', 'Лошадки']
-        li.menu__list-item= li
+      each li in list
+        li.menu__list-item
+          a(class="menu__link" name= li.name href='/' + li.name)= li.text
 </template>
 
 <script>
@@ -29,7 +36,10 @@ export default {
     &__list-item
       margin 0 5px
       display inline
+
+    &__link
       line-height 20px
       text-transform uppercase
+      text-decoration none
 
 </style>
