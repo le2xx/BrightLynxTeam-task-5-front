@@ -2,6 +2,7 @@
   include ../pugs/mixins.pug
   .dogs
     header-component
+    menu-component
     h2 {{ dogs }}
     h3 фото
     each foto in [1, 2, 3]
@@ -14,10 +15,12 @@
 
 <script>
 import Header from '@/components/header'
+import Menu from '@/components/menu'
 export default {
   name: 'Dogs',
   components: {
-    'header-component': Header
+    'header-component': Header,
+    'menu-component': Menu
   },
   data () {
     return {

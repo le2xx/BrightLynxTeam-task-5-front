@@ -4,6 +4,7 @@ import Index from '@/components/index'
 import Cats from '@/components/cats'
 import Dogs from '@/components/dogs'
 import Horses from '@/components/horses'
+import Registry from '@/components/registry'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/horses',
       name: 'Horses',
       component: Horses
+    },
+    {
+      path: '/registry',
+      name: 'Registry',
+      component: Registry
     }
   ]
 })

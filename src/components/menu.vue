@@ -4,12 +4,15 @@
       const list = [
         { name: 'cats', text: 'Кошки' },
         { name: 'dogs', text: 'Собачки' },
-        { name: 'horses', text: 'Лошадки' }
+        { name: 'horses', text: 'Лошадки' },
+        { name: 'registry', text: 'Регистрация'}
       ];
     ul.menu__list
+      li.menu__list-item
+        a(class="menu__link" href="/") главная
       each li in list
         li.menu__list-item
-          a(class="menu__link" name= li.name href='/' + li.name)= li.text
+          a(class="menu__link" name= li.name href="/" + li.name)= li.text
 </template>
 
 <script>

@@ -2,6 +2,7 @@
   include ../pugs/mixins.pug
   .cats
     header-component
+    menu-component
     h2 {{ cats }}
     h3 фото
     each foto in [1, 2, 3]
@@ -14,12 +15,12 @@
 
 <script>
 import Header from '@/components/header'
-// import Video from '@/components/video'
+import Menu from '@/components/menu'
 export default {
   name: 'Cats',
   components: {
-    'header-component': Header
-    // 'video-component': Video
+    'header-component': Header,
+    'menu-component': Menu
   },
   data () {
     return {
