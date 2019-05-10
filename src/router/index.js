@@ -5,6 +5,7 @@ import Cats from '@/components/cats'
 import Dogs from '@/components/dogs'
 import Horses from '@/components/horses'
 import Registry from '@/components/registry'
+import Users from '@/components/users'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/registry',
       name: 'Registry',
       component: Registry
+    },
+    {
+      path: '/users',
+      name: 'Users',
+      component: Users
     }
   ]
 })

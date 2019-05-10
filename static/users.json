@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Игорь",
+      "email": "igor@ft.com",
+      "pass": "sdfdsfgfgdhf"
+    },
+    {
+      "id": 2,
+      "name": "Анна",
+      "email": "anna1993@mailsf.com",
+      "pass": "dfghfh3dfg"
+    },
+    {
+      "id": 3,
+      "name": "Василий",
+      "email": "vasya-man@mailbk.com",
+      "pass": "ftg344"
+    },
+    {
+      "id": 4,
+      "name": "Егорка",
+      "email": "egorka@egorka.com",
+      "pass": "ghtyu64fd"
+    },
+    {
+      "id": 5,
+      "name": "Антошка",
+      "email": "ironman@antonmail.dd",
+      "pass": "hjy4gfh"
+    }
+  ]
+}
