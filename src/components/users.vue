@@ -8,7 +8,7 @@
         th ID
         th Имя
         th e-mail
-      tr(v-for="item in data" :key="item")
+      tr(v-for="item in data")
         td.users__table-td {{ item.id }}
         td.users__table-td {{ item.name }}
         td.users__table-td {{ item.email }}

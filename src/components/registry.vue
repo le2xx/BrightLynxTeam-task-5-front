@@ -5,17 +5,18 @@
     h2 {{ registry }}
     form.registry__form
       label.registry__label Имя
-        input(type="text" class="registry__input" placeholder="введите имя")
+        input(type="text" class="registry__input" name="name" placeholder="введите имя" v-model="formData.name")
       label.registry__label e-mail
-        input(type="text" class="registry__input" placeholder="введите e-mail")
+        input(type="text" class="registry__input" name="email" placeholder="введите e-mail" v-model="formData.email")
       label.registry__label пароль
-        input(type="text" class="registry__input" placeholder="введите пароль")
-      button(type="submit") ОК
+        input(type="text" class="registry__input" name="pass" placeholder="введите пароль" v-model="formData.pass")
+      div(v-on:click="submitForm" class="registry__btn") ОК
 </template>
 
 <script>
 import Header from '@/components/header'
 import Menu from '@/components/menu'
+import axios from 'axios'
 
 export default {
   name: 'Registry',
@@ -25,7 +26,23 @@ export default {
   },
   data () {
     return {
-      registry: 'Регистрация'
+      registry: 'Регистрация',
+      formData: {
+        name: null,
+        email: null,
+        pass: null
+      }
+    }
+  },
+  methods: {
+    submitForm () {
+      axios.post('http://ya.ru', this.FormData)
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     }
   }
 }
@@ -53,5 +70,12 @@ export default {
 
     &__input
       margin 0 10px
+
+    &__btn
+      width 30px
+      height 20px
+      border solid 1px $form-color
+      border-radius 3px
+      text-align center
 
 </style>
