@@ -9,10 +9,10 @@
       ];
     ul.menu__list
       li.menu__list-item
-        a(class="menu__link" href="/") главная
+        router-link(class="menu__link" to="/") главная
       each li in list
         li.menu__list-item
-          a(class="menu__link" name= li.name href="/" + li.name)= li.text
+          router-link(class="menu__link" to="/" + li.name)= li.text
 </template>
 
 <script>

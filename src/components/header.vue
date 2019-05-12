@@ -2,8 +2,8 @@
   .header
     h1.header__title {{ title }}
     span.header__right-block
-      a(class="header__link" href="/signIn") Вход
-      a(class="header__link" href="/registry") Регистрация
+      router-link(class="header__link" to="/signIn") Вход
+      router-link(class="header__link" to="/registry") Регистрация
 </template>
 
 <script>
