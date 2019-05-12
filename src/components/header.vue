@@ -2,8 +2,8 @@
   .header
     h1.header__title {{ title }}
     span.header__right-block
-      button Вход
-      button Регистрация
+      a(class="header__link" href="/signIn") Вход
+      a(class="header__link" href="/registry") Регистрация
 </template>
 
 <script>
@@ -35,5 +35,9 @@ export default {
   &__right-block
     display inline-block
     vertical-align middle
-    text-align right
+
+  &__link
+    margin 0 15px
+    text-transform uppercase
+    text-decoration none
 </style>

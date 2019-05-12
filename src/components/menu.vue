@@ -5,7 +5,6 @@
         { name: 'cats', text: 'Кошки' },
         { name: 'dogs', text: 'Собачки' },
         { name: 'horses', text: 'Лошадки' },
-        { name: 'registry', text: 'Регистрация'},
         { name: 'users', text: 'Пользователи'}
       ];
     ul.menu__list

@@ -1,15 +1,13 @@
 <template lang="pug">
-  .registry
+  .signin
     header-component
     menu-component
-    h2 {{ registry }}
-    form.registry__form
-      label.registry__label Имя
-        input(type="text" class="registry__input" name="name" placeholder="введите имя" v-model="formData.name")
-      label.registry__label e-mail
-        input(type="text" class="registry__input" name="email" placeholder="введите e-mail" v-model="formData.email")
-      label.registry__label пароль
-        input(type="text" class="registry__input" name="pass" placeholder="введите пароль" v-model="formData.pass")
+    h2 {{ signIn }}
+    form.signin__form
+      label.signin__label Имя
+        input(type="text" class="signin__input" name="name" placeholder="введите имя" v-model="formData.name")
+      label.signin__label пароль
+        input(type="text" class="signin__input" name="pass" placeholder="введите пароль" v-model="formData.pass")
       div(v-on:click="submitForm" class="registry__btn") ОК
 </template>
 
@@ -19,27 +17,26 @@ import Menu from '@/components/menu'
 import axios from 'axios'
 
 export default {
-  name: 'Registry',
+  name: 'signIn',
   components: {
     'header-component': Header,
     'menu-component': Menu
   },
   data () {
     return {
-      registry: 'Регистрация',
+      signIn: 'Вход',
       formData: {
         name: null,
-        email: null,
         pass: null
       }
     }
   },
   methods: {
     submitForm () {
-      // тут форма отправляется в REST API, и выходит сообщение об успешности или ошибке входа. Без API это сделать сложно :(
-      axios.post('http://api.local/registry', this.FormData)
+      // тут форма отправляется в REST API, и выходит сообщение об успешности или ошибке входа.  Без API это сделать сложно :(
+      axios.post('http://api.local/signin', this.FormData)
         .then((response) => {
-          alert('Пользователь зарегистрирован' + response)
+          alert('Вы вошли на сайт' + response)
         })
         .catch((error) => {
           alert(error)
@@ -52,7 +49,7 @@ export default {
 <style lang="stylus">
   @import '../stylus/main.styl'
 
-  .registry
+  .signin
     position relative
 
     &__form
@@ -78,5 +75,4 @@ export default {
       border solid 1px $form-color
       border-radius 3px
       text-align center
-
 </style>
