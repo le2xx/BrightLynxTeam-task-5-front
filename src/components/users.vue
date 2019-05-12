@@ -48,12 +48,8 @@ export default {
   @import '../stylus/main.styl'
 
   .users
-    position relative
 
     &__table
-      position absolute
-      left 0
-      right 0
       margin auto
       padding 3px
       width 300px
